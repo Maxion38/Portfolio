@@ -4,7 +4,6 @@ import styles from './Stage.module.css'
 import Page1 from './page1';
 import Page2 from './page2';
 
-
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -12,6 +11,7 @@ import "swiper/css/pagination";
 export default function Stage() {
   return (
     <Swiper
+      onSwiper={(swiper) => (window.swiper = swiper)}
       modules={[Pagination, Mousewheel]}
       direction="horizontal"
       slidesPerView={1}

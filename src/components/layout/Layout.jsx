@@ -1,3 +1,5 @@
+// Layout.jsx
+
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
 import styles from './Layout.module.css';

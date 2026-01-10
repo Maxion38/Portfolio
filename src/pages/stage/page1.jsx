@@ -1,11 +1,40 @@
+// page1.jsx
+
 import styles from './page1.module.css'
 import glassStyles from '../../components/glass.module.css'
 
 
 export default function Page1() {
+  const handleMouseEnter = (e) => {
+    const el = e.currentTarget;
+    el.focus();
+
+    const isScrollable = el.scrollHeight > el.clientHeight;
+
+    if (isScrollable) {
+      swiper.mousewheel.disable();
+    }
+  };
+
+  const handleMouseLeave = (e) => {
+    const el = e.currentTarget;
+    const wasScrollable = el.scrollHeight > el.clientHeight;
+
+    if (wasScrollable) {
+      swiper.mousewheel.enable();
+    }
+  };
+
+
   return (
     <section className={styles.page}>
-        <div className={glassStyles.glass}>
+      <div className={` ${glassStyles.glass} ${styles.card}`} >
+        <div 
+          className={` ${styles.scrollContent} `} 
+          tabIndex={0} 
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <article className={styles.article}>
             <h1>Mon projet professionnel</h1>
             <p>
@@ -22,6 +51,7 @@ export default function Page1() {
             </p>
           </article>
         </div>
+      </div>
     </section>
   );
 }
