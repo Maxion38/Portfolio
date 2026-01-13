@@ -5,7 +5,7 @@ export default function GlassButton({
   children,
   layout = true,
   textStyle = true,
-  as: Component = "div",
+  as: Component = "button",
   className = "",
   ...props
 }) {
@@ -17,7 +17,10 @@ export default function GlassButton({
   ].filter(Boolean).join(" ");
 
   return (
-    <Component className={classes} {...props}>
+    <Component
+      className={classes}
+      {...props}
+    >
       {children}
     </Component>
   );

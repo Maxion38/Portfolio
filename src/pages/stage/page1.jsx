@@ -5,8 +5,7 @@ import pageLayout from '../../components/layout/PageLayout.module.css'
 
 export default function Page1() {
   return (
-    // <div className={pageLayout.page}>
-    <div className={styles.page}>
+    <div className={pageLayout.page}>
       <GlassDiv>
         <article className={styles.article}>
           <h1>Mon projet professionnel</h1>
