@@ -3,6 +3,7 @@ import styles from "./GlassButton.module.css";
 
 export default function GlassButton({
   children,
+  padding = true,
   layout = true,
   textStyle = true,
   as: Component = "button",
@@ -11,6 +12,7 @@ export default function GlassButton({
 }) {
   const classes = [
     glassStyles.glassButton,
+    padding && styles.padding,
     layout && styles.layout,
     textStyle && styles.textStyle,
     className

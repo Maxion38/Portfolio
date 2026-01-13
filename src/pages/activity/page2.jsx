@@ -1,6 +1,7 @@
 import styles from './page2.module.css';
-import glassStyles from '../../components/glass.module.css';
+import GlassDiv from "../../components/ui/glass/GlassDiv"
 import { MdBookmarkAdded } from "react-icons/md";
+
 
 export default function Page2() {
   return (
@@ -8,7 +9,7 @@ export default function Page2() {
 
       <div className={styles.container}>
         {/* Texts */}
-        <div className={glassStyles.glass}>
+        <GlassDiv>
           <article className={styles.article}>
             <h1>Projet d'intégration</h1>
             <p>
@@ -30,20 +31,20 @@ export default function Page2() {
               Le travail réalisé a été monstrueux tant il y avait à faire. Ce projet nous a tous appris à bien communiquer, à bien répartir le travail entre nous, à organiser des réunions, à travailler certains jours ensemble et d’autres en solo. Cela m’a évidemment été très utile pour mon stage, car je me suis retrouvé à nouveau au sein d’une équipe, ce qui m’a permis d’être familier avec les outils utilisés et les méthodes de travail en groupe.
             </p>
           </article>
-        </div>
+        </GlassDiv>
 
         {/* Temps */}
         <div className={styles.row}>
-          <div className={glassStyles.glass}>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps comptabilisé <strong className={styles.strong}>15h</strong>
             </p>
-          </div>
-          <div className={glassStyles.glass}>
+          </GlassDiv>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps réel <strong className={styles.strong}>60h+</strong>
             </p>
-          </div>
+          </GlassDiv>
         </div>
       </div>
 

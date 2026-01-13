@@ -1,11 +1,15 @@
+.padding {
+    padding: 40px 40px;
+}
+
 .layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
     text-align: center;
-    padding: 30px 40px;
     box-sizing: border-box;
+    max-width: 600px;
 }
 
 .textStyle {

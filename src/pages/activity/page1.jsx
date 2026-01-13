@@ -1,5 +1,6 @@
 import styles from './page1.module.css';
-import glassStyles from '../../components/glass.module.css';
+import GlassDiv from "../../components/ui/glass/GlassDiv"
+import GlassButton from "../../components/ui/glass/GlassButton"
 import { FaDownload } from "react-icons/fa6";
 import { MdBookmarkAdded } from "react-icons/md";
 
@@ -8,7 +9,7 @@ export default function Page1() {
     <div className={styles.page}>
       {/* Bloc texte + stats */}
       <div className={styles.container}>
-        <div className={glassStyles.glass}>
+        <GlassDiv className={styles.card}>
           <article className={styles.article}>
             <h1>Formations au développement Web</h1>
             <p>
@@ -31,30 +32,30 @@ export default function Page1() {
               recherches efficaces sur Internet pour me documenter.
             </p>
           </article>
-        </div>
+        </GlassDiv>
 
         <div className={styles.row}>
-          <div className={glassStyles.glass}>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps comptabilisé <strong className={styles.strong}>10h</strong>
             </p>
-          </div>
-          <div className={glassStyles.glass}>
+          </GlassDiv>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps réel <strong className={styles.strong}>~25h</strong>
             </p>
-          </div>
+          </GlassDiv>
           <a
             href="/Mes-formations-technofutur.pdf"
             download
             className={styles.a}
           >
-            <div className={glassStyles.glassButton}>
+            <GlassButton padding={false} className={styles.padding}>
               <div className={styles.downloadRow}>
                 <p className={styles.noMargin}>Attestation de suivis</p>
                 <FaDownload size="1.5rem" />
               </div>
-            </div>
+            </GlassButton>
           </a>
         </div>
       </div>

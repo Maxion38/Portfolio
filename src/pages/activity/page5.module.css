@@ -1,51 +1,40 @@
 .page {
-  height: 94%;
+  height: 100%;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  padding-right: 5rem; 
+  padding : 15px 5rem 35px 5rem;
+  gap: 2rem
 }
 
 .container {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem; 
+  gap: 2rem; 
 }
 
-.article {
-  text-align: justify;
-  max-width: 1000px; 
+.padding {
+  padding: 15px 20px;
 }
 
 .row {
   display: flex;
-  gap: 1rem; 
-}
-
-.pdf {
-  width: 100%;
-  height: 95%;
-  border: none;
+  gap: 2rem; 
 }
 
 .noMargin {
   margin: 0;
 }
 
-.videoWrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
+.strong {
+  margin-left: 0.2rem;
 }
 
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+.photo {
+  max-width: 100%;
+  height: auto;
 }
-

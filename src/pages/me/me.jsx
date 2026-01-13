@@ -28,7 +28,6 @@ export default function Me({ setActiveTab }) {
       <SwiperSlide>
         <Page2 />
       </SwiperSlide>
-
       <SwiperSlide>
         <Page3 />
       </SwiperSlide>

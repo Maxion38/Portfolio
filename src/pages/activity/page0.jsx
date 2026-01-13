@@ -1,14 +1,14 @@
 import styles from './page0.module.css';
-import glassStyles from '../../components/glass.module.css';
-import { FaDownload } from "react-icons/fa6";
 import { MdBookmarkAdded } from "react-icons/md";
+import GlassDiv from "../../components/ui/glass/GlassDiv"
+
 
 export default function Page0() {
   return (
     <div className={styles.page}>
       {/* Bloc texte + stats */}
       <div className={styles.container}>
-        <div className={glassStyles.glass}>
+        <GlassDiv>
           <article className={styles.article}>
             <h1>Activités d’acquisition de compétences</h1>
             <p>
@@ -19,26 +19,25 @@ export default function Page0() {
               réaliser mon stage au mieux et pour ma futur vie dans le monde 
               professionnel.
             </p>
-
           </article>
-        </div>
+        </GlassDiv>
         <div className={styles.row}>
-          <div className={` ${glassStyles.glass} ${styles.topics} `}>
+          <GlassDiv className={styles.topics}>
             <h3><MdBookmarkAdded size={"1em"} />Compétences techniques Web</h3>
             <h3><MdBookmarkAdded size={"1em"} />Organisation</h3>
             <h3><MdBookmarkAdded size={"1em"} />Esprit d'équipe</h3>
             <h3><MdBookmarkAdded size={"1em"} />Curiosité</h3>
             <h3><MdBookmarkAdded size={"1em"} />Monde professionnel</h3>
             <h3><MdBookmarkAdded size={"1em"} />Compétences techniques mobile</h3>
-          </div>
+          </GlassDiv>
 
           <div className={styles.time}>
-            <div className={glassStyles.glass}>
+            <GlassDiv>
               <p className={styles.noMargin}>
                 Temps total comptabilisé 
               </p>
               <strong className={styles.strong}>60h</strong>
-            </div>
+            </GlassDiv>
           </div>
         </div>
       </div>

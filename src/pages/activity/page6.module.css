@@ -1,26 +1,28 @@
 .page {
-  height: 94%;
+  height: 100%;
+  box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 3rem; 
-  padding-bottom: 3rem; 
+  grid-template-columns: 7fr 5fr;
+  padding : 15px 5rem 35px 5rem;
+  gap: 2rem
 }
 
 .container {
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem; 
+  gap: 2rem; 
 }
 
-.article {
-  max-width: 800px; 
+.padding {
+  padding: 15px 20px;
 }
 
 .row {
   display: flex;
-  gap: 1rem; 
+  gap: 2rem; 
 }
 
 .noMargin {
@@ -29,7 +31,7 @@
 
 .videoWrapper {
   position: relative;
-  width: clamp(40%, 70%, 85%);
+  width: clamp(40%, 85%, 85%);
   aspect-ratio: 16 / 9;
   border: 4px solid white;
   border-radius: 10px;

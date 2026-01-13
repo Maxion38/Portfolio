@@ -4,6 +4,7 @@ import styles from "./GlassDiv.module.css";
 
 export default function GlassDiv({
   children,
+  padding = true,
   layout = true,
   textStyle = true,
   as: Component = "div",
@@ -19,6 +20,7 @@ export default function GlassDiv({
   const classes = [
     glassStyles.glass,
     styles.container,
+    padding && styles.padding,
     layout && styles.layout,
     textStyle && styles.textStyle,
     className

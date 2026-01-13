@@ -19,6 +19,7 @@ export default function Activity() {
   return (
     <>
       <Swiper
+        onSwiper={(swiper) => (window.swiper = swiper)}
         modules={[Pagination, Mousewheel]}
         direction="horizontal"
         slidesPerView={1}
@@ -58,10 +59,12 @@ export default function Activity() {
       </Swiper>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <article>
         <h2>Information sur l'attestation</h2>
         <p>
-Je n'ai pas trouvé de preuve de présence étant donné que se sont les professeurs qui ont pris les présences mais cette conférence était obligatoire dans le cadre du cours de traitements de signaux (il y avait une question sur cette conférence dans l'examen).
+          Je n'ai pas trouvé de preuve de présence étant donné que se sont les professeurs qui ont pris les présences mais cette conférence était obligatoire dans le cadre du cours de traitements de signaux (il y avait une question sur cette conférence dans l'examen).
         </p>
+        </article>
       </Modal>
     </>
   );

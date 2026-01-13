@@ -1,5 +1,6 @@
 import styles from './page3.module.css';
-import glassStyles from '../../components/glass.module.css';
+import GlassDiv from "../../components/ui/glass/GlassDiv"
+import GlassButton from "../../components/ui/glass/GlassButton"
 import { FaDownload } from "react-icons/fa6";
 import { MdBookmarkAdded } from "react-icons/md";
 
@@ -18,7 +19,7 @@ export default function Page3() {
 
       {/* Bloc texte + stats */}
       <div className={styles.container}>
-        <div className={glassStyles.glass}>
+        <GlassDiv>
           <article className={styles.article}>
             <h1>Expérience internationale</h1>
             <p>
@@ -30,30 +31,30 @@ export default function Page3() {
               Encore une fois, le travail d’équipe était très important, d’autant plus que nous parlions tous en anglais puisque nous étions avec deux élèves de la SAMK Pori. L’ambiance était géniale, car après le travail nous partions faire des activités en Finlande, ce qui renforçait chaque jour davantage notre équipe. C’est là que j’ai appris qu’être dans une équipe où tout le monde s’entend bien est primordial. Je fais un parallèle entre cette expérience et le team building que j’ai pu vivre avec mon équipe durant mon stage.
             </p>
           </article>
-        </div>
+        </GlassDiv>
 
         <div className={styles.row}>
-          <div className={glassStyles.glass}>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps comptabilisé <strong className={styles.strong}>10h</strong>
             </p>
-          </div>
-          <div className={glassStyles.glass}>
+          </GlassDiv>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps réel <strong className={styles.strong}>30h</strong>
             </p>
-          </div>
+          </GlassDiv>
           <a
             href="/attestation-BIP.pdf"
             download
             className={styles.a}
           >
-            <div className={glassStyles.glassButton}>
+            <GlassButton padding={false} className={styles.padding}>
               <div className={styles.downloadRow}>
                 <p className={styles.noMargin}>Attestation de suivis</p>
                 <FaDownload size="1.5rem" />
               </div>
-            </div>
+            </GlassButton>
           </a>
         </div>
       </div>

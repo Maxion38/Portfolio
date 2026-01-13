@@ -1,5 +1,6 @@
 import styles from './page4.module.css';
-import glassStyles from '../../components/glass.module.css';
+import GlassDiv from "../../components/ui/glass/GlassDiv"
+import GlassButton from "../../components/ui/glass/GlassButton"
 import MPPhoto from '../../assets/Mathieu-Petieau-transparent.png';
 import { MdBookmarkAdded } from "react-icons/md";
 import { IoInformationCircleSharp } from "react-icons/io5";
@@ -9,7 +10,7 @@ export default function Page4({ onOpenModal }) {
     <div className={styles.page}>
       {/* text */}
       <div className={styles.container}>
-        <div className={glassStyles.glass}>
+        <GlassDiv>
           <article className={styles.article}>
             <h1>Conférence de Mathieu Petieau</h1>
             <p>
@@ -21,31 +22,31 @@ export default function Page4({ onOpenModal }) {
               J'ai adoré le sujet abordé et cela m'a permis de développer ma curiosité. Durant mon stage, je me suis rendu compte que la curiosité est un élément important en informatique, tant il existe de technologies différentes. J'ai été missionné pour explorer la technologie Flutter que je ne connaissais pas. Ma curiosité m'a alors permis d'approfondir le sujet et d'apporter des éléments importants pour l'entreprise concernant cette technologie.
             </p>
           </article>
-        </div>
+        </GlassDiv>
 
         <div className={styles.row}>
-          <div className={glassStyles.glass}>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps comptabilisé <strong className={styles.strong}>2h</strong>
             </p>
-          </div>
-          <div className={glassStyles.glass}>
+          </GlassDiv>
+          <GlassDiv padding={false} className={styles.padding}>
             <p className={styles.noMargin}>
               Temps réel <strong className={styles.strong}>2h</strong>
             </p>
-          </div>
-          <div className={glassStyles.glassButton} onClick={onOpenModal}>
+          </GlassDiv>
+          <GlassButton onClick={onOpenModal} padding={false} className={styles.padding}>
             <div className={styles.downloadRow}>
               <p className={styles.noMargin}>Attestation de suivis</p>
               <IoInformationCircleSharp size="1.5rem" />
             </div>
-          </div>
+          </GlassButton>
         </div>
       </div>
       
       {/* image */}
       <div className={styles.container}>
-        <img src={MPPhoto} alt="Moi" className={styles.photo} />
+        <img src={MPPhoto} alt="Mathieu Petieau" className={styles.photo} />
       </div>
     </div>
   );
