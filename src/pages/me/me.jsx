@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 export default function Me({ setActiveTab }) {
   return (
     <Swiper
+      onSwiper={(swiper) => (window.swiper = swiper)}
       modules={[Pagination, Mousewheel]}
       direction="horizontal"
       slidesPerView={1}

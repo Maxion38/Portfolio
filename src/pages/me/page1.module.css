@@ -1,25 +1,44 @@
-.grid {
-  width: 100%;
-  max-width: 90vw;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.profile {
+.page {
+  height: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  padding : 15px 5rem 35px 5rem;
+  gap: 2rem;
+}
+
+.container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 2rem;
+}
+
+.card {
+  min-height: 0;
+  flex: 1 1 0;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.imageZone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  flex: 1 1 0;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.card,
+.imageZone {
+  flex: 1 1 0;
+  min-height: 0;
 }
 
 .photo {
-  width: 40%;
-  transform: translateY(20px);
-}
-
-.center {
-  display: flex;
-  justify-content: center;
+  width: clamp(20%, 50%, 60%);
+  flex-shrink: 0;
 }
