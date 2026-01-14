@@ -5,6 +5,8 @@
 .layout {
     box-sizing: border-box;
     max-width: 1200px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .textStyle {

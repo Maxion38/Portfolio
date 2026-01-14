@@ -5,12 +5,11 @@ import Page1 from './page1';
 import Page2 from './page2';
 import Page3 from './page3';
 
-
 import "swiper/css";
 import "swiper/css/pagination";
 
 
-export default function Me({ setActiveTab }) {
+export default function Me() {
   return (
     <Swiper
       onSwiper={(swiper) => (window.swiper = swiper)}
@@ -29,6 +28,7 @@ export default function Me({ setActiveTab }) {
       <SwiperSlide>
         <Page2 />
       </SwiperSlide>
+
       <SwiperSlide>
         <Page3 />
       </SwiperSlide>

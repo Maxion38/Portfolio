@@ -8,6 +8,7 @@ import Page3 from "./page3";
 import Page4 from "./page4";
 import Page5 from "./page5";
 import Page6 from "./page6";
+import Page7 from "./page7";
 import Modal from "../../components/Modal";
 
 import "swiper/css";
@@ -55,6 +56,10 @@ export default function Activity() {
 
         <SwiperSlide>
           <Page6 />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Page7 />
         </SwiperSlide>
       </Swiper>
 
